@@ -1,0 +1,18 @@
+<h1>Hello from index's view</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @restaurants.each do |restaurant| %>
+          <tr>
+            <td><%= link_to restaurant.name, restaurant_path(restaurant) %></td>
+            <td><%= restaurant.address %></td>
+          </tr>
+    <% end %>
+  </tbody>
+</table>
